@@ -1,0 +1,133 @@
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 101;
+	width: 100%;
+	transition: 300ms;
+	padding-top: 37px;
+	.container {
+		max-width: 1316px;
+	}
+	&.active {
+		position: fixed;
+		background-color: white;
+		padding: 10px 0;
+	}
+	// .header_inner
+	&_inner {
+		display: flex;
+		align-items: center;
+		transition: 300ms;
+		@media (max-width: 450px) {
+			justify-content: flex-end;
+		}
+	}
+	// .header_logo
+	&_logo {
+		font-family: Nova Script;
+		font-size: 23px;
+		line-height: 28 / 23 * 100%;
+		text-transform: uppercase;
+		margin-left: -5px;
+		flex: 1 1 auto;
+		span {
+			color: #ffae00;
+		}
+		@media (max-width: 450px) {
+			display: none;
+		}
+	}
+	// .header_links
+	&_links {
+		font-size: 14px;
+		line-height: 21 / 14 * 100%;
+		a {
+			color: black;
+			position: relative;
+			&::after {
+				content: "";
+				display: block;
+				position: absolute;
+				bottom: 0px;
+				left: 0;
+				width: 0;
+				height: 0;
+				background-color: black;
+				transition: 300ms;
+			}
+			@media (any-hover: hover) {
+				&:hover::after {
+					width: 100%;
+					height: 1px;
+				}
+			}
+		}
+	}
+	// .header_login
+	&_login {
+	}
+	// .header_reg
+	&_reg {
+	}
+}
+
+.menu_burger {
+	height: 28px;
+	width: 40px;
+	flex: 0 0 40px;
+	position: relative;
+	cursor: pointer;
+	transition: 300ms;
+	display: none;
+	margin-left: 30px;
+	@media screen and (max-width: 1250px) {
+		display: block;
+	}
+	&.active {
+		span:nth-child(1) {
+			opacity: 0;
+		}
+		span:nth-child(2) {
+			transform: rotate(37deg);
+		}
+		span:nth-child(3) {
+			transform: rotate(-37deg);
+		}
+	}
+	span {
+		transition: 300ms;
+		transform-origin: left;
+	}
+	span:nth-child(1) {
+		height: 4px;
+		width: 100%;
+		border-radius: 2px;
+		background: black;
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+	}
+	span:nth-child(2) {
+		height: 4px;
+		width: 100%;
+		border-radius: 2px;
+		background: black;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+	span:nth-child(3) {
+		height: 4px;
+		width: 100%;
+		border-radius: 2px;
+		background: black;
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+	}
+}

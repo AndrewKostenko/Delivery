@@ -1,0 +1,226 @@
+.footer {
+	// .footer_top
+	&_top {
+		background: url(../img/footer/back.jpg) center / cover no-repeat;
+		&-inner {
+			color: white;
+			display: flex;
+			grid-gap: 40px 92px;
+			padding: 50px 0 28px 0;
+			@media (max-width: 1150px) {
+				flex-wrap: wrap;
+			}
+			@media (max-width: 750px) {
+				grid-gap: 25px;
+			}
+		}
+	}
+	// .footer_main
+	&_main {
+		max-width: 316px;
+		@media (max-width: 1150px) {
+			order: 1;
+			max-width: 65%;
+		}
+		@media (max-width: 750px) {
+			max-width: none;
+		}
+	}
+	// .footer_logo
+	&_logo {
+		font-family: Nova Script;
+		font-size: 23px;
+		line-height: 28 / 23 * 100%;
+		margin-bottom: 22px;
+		text-transform: uppercase;
+		span {
+			color: #ffae00;
+		}
+	}
+	// .footer_text
+	&_text {
+		font-size: 13px;
+		line-height: 20 / 13 * 100%;
+	}
+	// .footer_row
+	&_row {
+		display: flex;
+		grid-gap: 30px;
+		justify-content: space-between;
+		flex: 1 1 auto;
+		@media (max-width: 1150px) {
+			order: 3;
+			flex: 0 1 auto;
+			flex-wrap: wrap;
+			grid-gap: 50px;
+			justify-self: start;
+		}
+	}
+	// .footer_info
+	&_info {
+		@media (max-width: 1150px) {
+			order: 2;
+		}
+		@media (max-width: 750px) {
+			display: flex;
+			grid-gap: 50px;
+			flex-wrap: wrap;
+		}
+	}
+	// .footer_bottom
+	&_bottom {
+		background: #10093b;
+		padding: 11px 0 10px 0;
+	}
+	// .footer_bottom-inner
+	&_bottom-inner {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		grid-gap: 25px;
+		@media (max-width: 800px) {
+			justify-content: space-between;
+		}
+	}
+	// .footer_rights
+	&_rights {
+		flex: 1 1 auto;
+		margin-right: 30px;
+
+		font-size: 12px;
+		font-weight: 300;
+		line-height: 18 / 12 * 100%;
+		color: white;
+		@media (max-width: 800px) {
+			order: 3;
+			flex: 1 1 100%;
+			text-align: center;
+		}
+	}
+	// .footer_help
+	&_help {
+		display: flex;
+		align-items: center;
+		grid-gap: 10px;
+
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 21 / 14 * 100%;
+		color: #eda306;
+		margin-right: 26px;
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+		&::before {
+			content: "?";
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 22px;
+			height: 22px;
+			border-radius: 50%;
+
+			color: white;
+			background: #eda306;
+		}
+		@media (max-width: 800px) {
+			order: 2;
+		}
+	}
+	// .footer_payment
+	&_payment {
+		padding: 3px;
+		background: white;
+		img {
+			max-width: 100%;
+		}
+		@media (max-width: 800px) {
+			orphans: 1;
+		}
+	}
+}
+.list-footer {
+	min-width: 110px;
+	// .list-footer_title
+	&_title {
+		font-weight: 500;
+		line-height: 24 / 16 * 100%;
+		margin-bottom: 18px;
+		text-transform: uppercase;
+	}
+	a {
+		font-size: 14px;
+		font-weight: 300;
+		line-height: 31 / 14 * 100%;
+		color: white;
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+.info-footer {
+	margin-bottom: 22px;
+	&:last-child {
+		margin-bottom: 0;
+	}
+	// .info-footer_title
+	&_title {
+		font-weight: 500;
+		line-height: 24 / 16 * 100%;
+		margin-bottom: 13px;
+	}
+	// .info-footer_row
+	&_row {
+		display: flex;
+		align-items: center;
+		grid-gap: 11px;
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			color: white;
+
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			box-shadow: -5px 9px 8px rgba(0, 0, 0, 0.188235);
+			transition: 300ms;
+
+			@media (any-hover: hover) {
+				&:hover {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
+}
+.social-footer {
+	// .social-footer_facebook
+	&_facebook {
+		background: linear-gradient(135deg, #c8dcff 0%, #004acb 98.16%);
+	}
+	// .social-footer_google
+	&_google {
+		background: linear-gradient(144.44deg, #ffb6b6 0%, #f62b19 116.39%);
+	}
+	// .social-footer_twitter
+	&_twitter {
+		background: linear-gradient(138.9deg, #ffffff 0%, #00b99e 120.57%);
+	}
+	// .social-footer_gps
+	&_gps {
+		background-color: white;
+		&::before {
+			color: black;
+		}
+	}
+	// .social-footer_telephone
+	&_telephone {
+		background-color: #eda306;
+	}
+}
